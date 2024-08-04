@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Using API</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="content-container">
+        <section class="header">
+            <div class="nav-bar">
+                <div class="title">My Blog</div>
+            </div>
+        </section>
+        <section class="new-post-section">
+            <div class="new-post-div">
+                <a href="/new" id="newPostBtn">Create Post</a>
+            </div>
+        </section>
+        <section class="post-content">
+            <% if(locals.post) { %>
+                <% for(var i=0; i<post.length; i++)  {%>
+            <div class="post-container">
+                <div class="post-header"><%= post[i].postTitle %></div>
+                <div class="post-date"><%= post[i].postDate %></div>
+                <div class="post-body"><%= post[i].postBody %></div>
+                <div class="post-author"><%= post[i].postAuthor %></div>
+                <div class="buttons">
+                    <form method="POST" action="/edit/<%= post[i].id %>">
+                        <button type="submit" class="edit">Edit</button>
+                    </form>
+                    <form method="POST" action="/delete/<%= post[i].id %>">
+                        <button type="submit" class="delete">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% } %>
+            <% } %>
+        </section>
+    </div>
+</body>
+</html>

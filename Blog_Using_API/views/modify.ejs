@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/styles/modify.css">
+</head>
+<body>
+    <% if (locals.post)  {%>
+        <form method="POST" action="/editpost/<%= post.id %>">
+            <div class="text-div">
+                <input type="text" placeholder="Title" class="title" name="title" value="<%= post.postTitle %>" required>
+                <textarea class="text" placeholder="Body" name="body" required><%= post.postBody %></textarea>
+                <div class="endpoint">
+                    <input class="author" type="text" placeholder="Author" name="author" value="<%= post.postAuthor %>" required>
+                    <button type="submit" class="save-change">Save Changes</button>
+                </div> 
+            </div>
+        </form>
+        <% } else {%>
+    <form method="POST" action="/savepost">
+        <div class="text-div">
+            <input type="text" placeholder="Title" class="title" name="title" required>
+            <textarea class="text" placeholder="Body" name="body" required></textarea>
+            <div class="endpoint">
+                <input class="author" type="text" placeholder="Author" name="author" required>
+                <button type="submit" class="save-change">Post</button>
+            </div> 
+        </div>
+    </form>
+    <% } %>
+</body>
+</html>
