@@ -1,0 +1,1 @@
+This is just for practice to see how to use local strategy in order to initialize session for registration and login;
