@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-container {
+  width: 100%;
+  height: 20%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  font-family: 'Anek Devanagari';
+  align-items: center;
+  box-shadow: 0 0 5px gray;
+}
+
+.top-left {
+  display: flex;
+  font-size: xx-large;
+  font-weight: bold;
+  flex: 1;
+}
+
+.top-middle {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  font-size: x-large;
+}
+
+.nav-link {
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.top-middle .nav-link:hover {
+  text-decoration: underline;
+}
+
+.top-right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.cart:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: end;
+}
+
+.menu-clicked {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media query for header hamburger appearing */
+@media (min-width: 894px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 894px) {
+  .top-middle {
+    display: none;
+  }
+  .top-right {
+    display: none;
+  }
+}
+

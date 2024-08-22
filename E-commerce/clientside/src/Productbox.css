@@ -1,0 +1,82 @@
+.product-container {
+    width: 13rem;
+    box-shadow: 0 0 4px gray;
+}
+
+.product-container img{
+    width: 100%;
+}
+
+.product-container p {
+    margin: 0;
+    font-family: 'Anek Devanagari';
+    box-sizing: border-box;
+    padding: 0 4px 0 4px;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.price {
+    color: gray;
+}
+.product-container button {
+    width: 100%;
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: 'Anek Devanagari';
+    font-weight: bold;
+    cursor: pointer;
+    height: 2rem;
+    transition: opacity 0.15s;
+}
+.product-container button:hover {
+    opacity: 0.7;
+}
+.product-container button:active {
+    opacity: 0.5;
+}
+
+/* 
+Grid layout
+*/
+
+.products-grid {
+    box-sizing: border-box;
+    padding: 1rem 1rem 1rem 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 1341px) {
+    .products-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1120px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 896px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 672px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 448px) {
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
