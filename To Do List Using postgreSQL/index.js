@@ -3,6 +3,9 @@ import bodyParser from "body-parser";
 import pg from "pg";
 import { todo } from "node:test";
 
+
+//replace the fields with appropriate values
+
 const app = express();
 const port = 3000;
 const db = new pg.Client({
