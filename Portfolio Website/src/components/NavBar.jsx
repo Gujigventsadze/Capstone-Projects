@@ -38,7 +38,7 @@ export const NavBar = () => {
                 <a href="ig"><InstagramIcon style={{fontSize:'40px'}} /></a>
                 <a href="fb"><FacebookIcon style={{fontSize:'40px'}} /></a>
                 <a href="github"><GitHubIcon style={{fontSize:'40px'}} /></a>
-                <button className="hire-me btn">HIRE ME</button>
+                <Link to="contact" smooth={true} duration={500} className="hire-me" >HIRE ME</Link>
             </div>
             <div className={menuOpen ? "display-none" : "menu-icon"}>
                 <MenuIcon onClick={handleMenuClick} />

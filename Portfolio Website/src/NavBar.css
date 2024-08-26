@@ -63,7 +63,12 @@
 .contact-links a:hover {
     transform: translateY(-5px);
 }
-.contact-links button {
+.contact-links .hire-me {
+    display: flex;
+    justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    align-items: center;
     width: 10rem;
     border: 2px solid white;
     background-color: transparent;
@@ -73,7 +78,7 @@
     cursor: pointer;
 }
 
-.contact-links button:hover {
+.contact-links .hire-me:hover {
     background: radial-gradient(circle, rgba(140,69,239,1) 12%, rgba(151,6,241,1) 26%, rgba(69,98,220,1) 50%, rgba(69,82,252,1) 69%, rgba(70,137,143,1) 83%, rgba(69,102,211,1) 100%);
     border-color: transparent;
 }
