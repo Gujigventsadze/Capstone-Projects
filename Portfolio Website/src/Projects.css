@@ -105,11 +105,29 @@
     .projects-button a {
         width: 100%;
     }
+    .projects-grid div img {
+        width: 400px;
+    }
 }
 @media (max-width: 468px) {
     .projects-button a {
         font-size: 1.5rem;
         padding: 0;
+    }
+    .projects-grid div img {
+        width: 300px;
+    }
+    .projects-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .projects-grid div img {
+        width: 300px;
+    }
+    .projects-title {
+        font-size: 1.2rem;
     }
 }
 
