@@ -1,0 +1,138 @@
+.nav-bar {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2rem 3rem 2rem 3rem;
+    width: 100%;
+}
+
+.logo-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.navbar-links {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-links a {
+    box-sizing: border-box;
+    color: hsl(0, 0%, 70%);
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    position: relative; /* Required for the underline effect */
+    padding-bottom: 2px; /* Space between text and underline */
+    transition: all 0.3s ease;
+    cursor: pointer; 
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: hsl(0, 0%, 70%);
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+
+.navbar-links a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+}
+
+.contact-links {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.contact-links a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease-in;
+}
+.contact-links a:hover {
+    transform: translateY(-5px);
+}
+.contact-links button {
+    width: 10rem;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-links button:hover {
+    background: radial-gradient(circle, rgba(140,69,239,1) 12%, rgba(151,6,241,1) 26%, rgba(69,98,220,1) 50%, rgba(69,82,252,1) 69%, rgba(70,137,143,1) 83%, rgba(69,102,211,1) 100%);
+    border-color: transparent;
+}
+
+.display-none {
+    display: none;
+}
+
+.menu-icon {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.flex-column {
+    box-sizing: border-box;
+    padding: 1rem 0 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 30%;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    border: 3px solid white;
+    background-color: black;
+}
+
+.flex-column a {
+    color: white;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+}   
+
+.close-icon {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (min-width: 667px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 667px) {
+    .navbar-links {
+        display: none;
+    }
+    .contact-links {
+        display: none;
+    }
+    .nav-bar {
+        justify-content: space-between;
+    }
+}
