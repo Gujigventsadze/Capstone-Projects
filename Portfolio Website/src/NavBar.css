@@ -125,13 +125,25 @@
     right: 10px;
 }
 
-@media (min-width: 667px) {
+@media (max-width: 892px) {
+    .contact-links .hire-me {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 859px) {
+    .contact-links .hire-me {
+        font-size: 1rem;
+        width: inherit;
+    }
+}
+
+@media (min-width: 804px) {
     .menu-icon {
         display: none;
     }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 804px) {
     .navbar-links {
         display: none;
     }

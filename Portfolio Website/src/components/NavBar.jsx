@@ -18,10 +18,10 @@ export const NavBar = () => {
     return (
         <div className="nav-bar">
             <div className="logo">
-                <span className="logo-title">LOGO</span>
+                <span className="logo-title">GUJI</span>
             </div>
-            <div className={menuOpen ? "flex-column" : "navbar-links"} onClick={handleMenuClick}>
-                <div className={menuOpen ? "close-icon" : "display-none"}>
+            <div className={menuOpen ? "flex-column" : "navbar-links"}>
+                <div className={menuOpen ? "close-icon" : "display-none"} onClick={handleMenuClick}>
                     <CloseIcon />
                 </div>
                 <Link to="home" smooth={true} duration={500}>
@@ -35,9 +35,9 @@ export const NavBar = () => {
                 </Link>
             </div>
             <div className="contact-links">
-                <a href="ig"><InstagramIcon style={{fontSize:'40px'}} /></a>
-                <a href="fb"><FacebookIcon style={{fontSize:'40px'}} /></a>
-                <a href="github"><GitHubIcon style={{fontSize:'40px'}} /></a>
+                <a href="https://www.instagram.com/" target="_blank"><InstagramIcon style={{fontSize:'40px'}} /></a>
+                <a href="https://www.facebook.com/" target="_blank"><FacebookIcon style={{fontSize:'40px'}} /></a>
+                <a href="https://github.com/Gujigventsadze" target="_blank"><GitHubIcon style={{fontSize:'40px'}} /></a>
                 <Link to="contact" smooth={true} duration={500} className="hire-me" >HIRE ME</Link>
             </div>
             <div className={menuOpen ? "display-none" : "menu-icon"}>
